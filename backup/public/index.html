@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <center>
+    <div class="container">
+        <video height="100%" preload="metadata" class="main-video">
+          <source src="/video" type="video/mp4">
+        </video>
+        <controls>
+          <progressBar class="control-element">
+            <buffered></buffered>
+            <hover></hover>
+            <played></played>
+            <scrubber></scrubber>
+            <preview>
+              <previewTime>00:00</previewTime>
+            </preview>
+          </progressBar>
+          <i class="fa fa-play" aria-hidden="true" id="togglePlay"></i>
+          <volume>
+            <i class="fa fa-volume-up" aria-hidden="true" id="volume-icon"></i>
+            <slider>
+              <thumb></thumb>
+            </slider>
+          </volume>
+          <time>00:00 / 00:00</time>
+          <i class="fa fa-arrows-alt" aria-hidden="true" id="fullscreen"></i>
+        </controls>
+    </div>
+  </center>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/prototypes.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
