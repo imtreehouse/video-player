@@ -10,7 +10,7 @@ app.get("/js/main.js", function(req, res) {
   fs.readFile(`${__dirname}/src/scripts/main.js`, function(err, data) {
     if(err) throw err
     const obfuscationOptions = {
-      compact: true,
+      compact: false,
       controlFlowFlattening: true,
       controlFlowFlatteningThreshold: 1,
       deadCodeInjection: true,
@@ -20,7 +20,7 @@ app.get("/js/main.js", function(req, res) {
       rotateStringArray: true,
       stringArrayEncoding: true,
       target: 'browser',
-      unicodeEscapeSequence: true
+      unicodeEscapeSequence: false
   }
     const obfuscatedJS = JavaScriptObfuscator.obfuscate(data.toString(), obfuscationOptions)
     res.end(obfuscatedJS.getObfuscatedCode())
